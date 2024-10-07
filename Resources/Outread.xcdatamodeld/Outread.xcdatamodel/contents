@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="ArticleImageMO" representedClassName="ArticleImageMO" syncable="YES">
+        <attribute name="alt" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="src" optional="YES" attributeType="String"/>
+        <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArticleMO" inverseName="image" inverseEntity="ArticleMO"/>
+    </entity>
+    <entity name="ArticleMO" representedClassName="ArticleMO" syncable="YES">
+        <attribute name="altMetricScore" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="authorName" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
+        <attribute name="defaultSummary" attributeType="String"/>
+        <attribute name="doi" attributeType="String"/>
+        <attribute name="estimatedReadingTime" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="favouritedCount" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="imageId" optional="YES" attributeType="String"/>
+        <attribute name="lastReadDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastReadSummaryHeading" optional="YES" attributeType="String"/>
+        <attribute name="oneCardSummary" attributeType="String"/>
+        <attribute name="originalPaperTitle" optional="YES" attributeType="String"/>
+        <attribute name="simpleSummary" attributeType="String"/>
+        <attribute name="slug" attributeType="String"/>
+        <attribute name="subtitle" attributeType="String"/>
+        <attribute name="title" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String"/>
+        <relationship name="articleToCategories" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ArticleToCategoryMO" inverseName="article" inverseEntity="ArticleToCategoryMO"/>
+        <relationship name="bookmarks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="BookmarkedArticleMO" inverseName="article" inverseEntity="BookmarkedArticleMO"/>
+        <relationship name="image" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArticleImageMO" inverseName="article" inverseEntity="ArticleImageMO"/>
+    </entity>
+    <entity name="ArticleToCategoryMO" representedClassName="ArticleToCategoryMO" syncable="YES">
+        <attribute name="articleId" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <attribute name="categoryId" attributeType="String" spotlightIndexingEnabled="YES"/>
+        <relationship name="article" maxCount="1" deletionRule="No Action" destinationEntity="ArticleMO" inverseName="articleToCategories" inverseEntity="ArticleMO"/>
+        <relationship name="category" maxCount="1" deletionRule="No Action" destinationEntity="CategoryMO" inverseName="categoryToArticles" inverseEntity="CategoryMO"/>
+    </entity>
+    <entity name="BookmarkedArticleMO" representedClassName="BookmarkedArticleMO" syncable="YES">
+        <attribute name="articleId" attributeType="String"/>
+        <attribute name="assignedAt" attributeType="String"/>
+        <attribute name="assignedBy" optional="YES" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="userId" attributeType="String"/>
+        <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArticleMO" inverseName="bookmarks" inverseEntity="ArticleMO"/>
+    </entity>
+    <entity name="CategoryMO" representedClassName="CategoryMO" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="categoryToArticles" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ArticleToCategoryMO" inverseName="category" inverseEntity="ArticleToCategoryMO"/>
+    </entity>
+    <entity name="ReadingArticleMO" representedClassName="ReadingArticleMO" syncable="YES">
+        <attribute name="articleId" optional="YES" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="heading" optional="YES" attributeType="String"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+</model>
