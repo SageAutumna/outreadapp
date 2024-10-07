@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.outread.outread</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb487703407409741</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1010513920768-36io7la2finldgeq9ip9dcqh0n5qd1fv</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>487703407409741</string>
+	<key>FacebookClientToken</key>
+	<string>2bb0bc492c575bbbde8e07c48ab29362</string>
+	<key>FacebookDisplayName</key>
+	<string>Outread</string>
+	<key>GIDClientID</key>
+	<string>1010513920768-36io7la2finldgeq9ip9dcqh0n5qd1fv.apps.googleusercontent.com</string>
+	<key>GIDServerClientID</key>
+	<string>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</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Poppins-Black.ttf</string>
+		<string>Poppins-Bold.ttf</string>
+		<string>Poppins-ExtraBold.ttf</string>
+		<string>Poppins-ExtraLight.ttf</string>
+		<string>Poppins-Italic.ttf</string>
+		<string>Poppins-Light.ttf</string>
+		<string>Poppins-Medium.ttf</string>
+		<string>Poppins-Regular.ttf</string>
+		<string>Poppins-SemiBold.ttf</string>
+		<string>Poppins-Thin.ttf</string>
+	</array>
+</dict>
+</plist>
